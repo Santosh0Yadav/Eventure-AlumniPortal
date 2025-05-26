@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alumni Registration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      color: #fbf9f9;
+      background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: #292b2d;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo img {
+      max-width: 200px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #f7f6f6;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #fff;
+      color: #292b2d;
+    }
+
+    .form-login {
+      margin: 150px auto 50px auto;
+      width: 90%;
+      max-width: 600px;
+      padding: 40px 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 2px solid #ef3d22;
+      border-radius: 10px;
+    }
+
+    .form-login h4 {
+      margin-top: 20px;
+      color: #ef3d22;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    #btn-sub {
+      width: 100%;
+      margin-top: 25px;
+      padding: 10px;
+      background-color: #ef3d22;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #btn-sub:hover {
+      background-color: #333;
+    }
+
+    h6 {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    h6 a {
+      font-family: cursive;
+      font-size: medium;
+      color: #ffcccb;
+      text-decoration: underline;
+    }
+
+    h6 a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="https://ggnindia.dronacharya.info/GGN-Brochure-2020/data/img1.png" alt="Dronacharya Group of Institutions" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="alumni.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Alumni Directory</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="form-login">
+    <form id="alumni-form">
+      <h4>PERSONAL INFORMATION :</h4>
+      <label>Name:</label>
+      <input type="text" required>
+      <label>Mobile Number:</label>
+      <input type="tel" required>
+      <label>Email:</label>
+      <input type="email" required>
+      <label>User Name:</label>
+      <input type="text" required>
+      <label>Password:</label>
+      <input type="password" required>
+
+      <h4>EDUCATION INFORMATION :</h4>
+      <label>Year of Joining:</label>
+      <input type="date" required>
+      <label>Year of Passing:</label>
+      <input type="date" required>
+      <label>College Email:</label>
+      <input type="email" required>
+      <label>College ID:</label>
+      <input type="text" required>
+
+      <label>Branch:</label>
+      <select required>
+        <option value="">-- Select Branch --</option>
+        <option value="cse">CSE</option>
+        <option value="it">IT</option>
+        <option value="ece">ECE</option>
+        <option value="eee">EEE</option>
+        <option value="mech">MECHANICAL</option>
+      </select>
+
+      <h4>ACHIEVEMENTS :</h4>
+      <label>Share your achievements:</label>
+      <textarea placeholder="Mention any awards, recognitions, publications, or contributions..."></textarea>
+
+      <button id="btn-sub" type="submit">SUBMIT</button>
+    </form>
+    <h6 id="success-msg" style="display:none;">Registered Successfully! <a href="login.html">Login Now</a></h6>
+  </section>
+
+  <script>
+    document.getElementById("alumni-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Simulate form success
+      document.getElementById("success-msg").style.display = "block";
+      document.getElementById("alumni-form").reset();
+    });
+  </script>
+</body>
+</html>

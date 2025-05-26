@@ -1,0 +1,329 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  /*Background color*/
+  background: #c2aa98;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+  background-color: #2d3033;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 400px;
+  height: 77px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-family: cursive;
+  font-size: 17px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #00407f;
+}
+
+/* Alumni Directory Dropdown Styles */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.nav-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+.nav-dropdown:hover a {
+  color: #000;
+}
+
+/* Banner Styles */
+#banner {
+  margin-top: 100px;
+  background-image: url('https://gnindia.dronacharya.info/images/school-building.jpg');
+  background-position: center;
+  background-size: cover;
+  color: rgb(22, 20, 20);
+  text-align: center;
+  padding: 270px 0;
+}
+
+#name h1 {
+  color: rgb(22, 20, 20);
+  text-align: center;
+  padding: 10px;
+  font-size: 80px;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+#name h3 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+/* About Section Styles */
+#about {
+  background-color: #f5f5f5;
+  padding: 100px 0;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+/* Events Section Styles */
+#events {
+  padding: 80px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+#events h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #2d3033;
+  font-weight: bold;
+}
+
+#events .event-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.event {
+  flex: 0 1 280px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-8px);
+}
+
+.event img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Alumni Directory Section Styles */
+#directory {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#directory h2 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+th {
+  background-color: #353c42;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Contact Section Styles */
+.container-contact {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#contact {
+  background-color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+#contact p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #262b2f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #262b2f;
+}
+
+/* ======== ADDED TO FIX NAVBAR ALIGNMENT ISSUE ======== */
+nav a {
+  white-space: nowrap;       /* Prevent text like "Contact Us" from wrapping */
+  padding: 0 15px;           /* Add horizontal spacing */
+  display: inline-block;     /* Ensure consistent layout */
+  text-align: center;
+}
+/* ====================================================== */
+
+
+/* Footer Styles */
+footer {
+  background-color: #262b2f;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
